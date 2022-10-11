@@ -2,5 +2,51 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+section {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        padding: 1.5rem 2rem;
+        img {
+            height: 4.5rem;
+        }
+    }
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.projets .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+    .box {
+        text-align: center;
+    }
+    img {
+            width: 100%;
+            margin-bottom: 1rem;
+    }
 }
