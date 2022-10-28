@@ -32,4 +32,5 @@ sass --watch style.scss:build.css
 <li>Set up your project name without using any uppercase characters</li>
 <li> Deployment is completed </li>
 <h2>Checkly</h2>
-<li>Go to Dashboard > Deployment > Running Checks > Add chechkly integration > Configure it</li>
+<li>Go to Dashboard > Deployment > Running Checks > Add checkly integration > Configure it</li>
+<li>Every 5 minute checkly will make a screenshot of the website and show how much time it take  </li>
