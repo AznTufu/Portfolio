@@ -2,14 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
     outline: none;
     border: none;
     text-decoration: none;
 }
 
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
+}
+
 section {
     padding: 3rem 2rem;
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto;
 }
 
@@ -18,6 +26,8 @@ section {
     top: 0;
     left: 0;
     right: 0;
+    background-color: #fff;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
     z-index: 1000;
     .flex {
         display: flex;
@@ -25,10 +35,78 @@ section {
         justify-content: space-between;
         position: relative;
         padding: 1.5rem 2rem;
-        img {
-            height: 4.5rem;
+        .logo {
+            font-size: 2rem;
         }
     }
+}
+
+#menu-btn {
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    transition: .2s linear;
+    &.fa-times {
+        transform: rotate(180deg);
+    }
+}
+
+#menu {
+    position: absolute;
+    background-color: rgb(28, 27, 28);
+    align-items: center;
+    display: flex;
+    height: 94.1vh;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    #menu-background-pattern {
+        background-position: 0% calc(-50% * (var(--active-index, 0) + 1));
+    }
+    &.menu-active {
+        opacity: 2;
+        visibility: inherit;
+    }
+}
+
+#menu-items {
+    margin-left: 20vw;
+    position: relative;
+    z-index: 2;
+    &:hover {
+        ~#menu-background-pattern {
+            background-size: 11vmin 11vmin;
+            opacity: 0.5;
+        }
+        >.menu-item {
+            opacity: 0.3;
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+#menu-background-pattern {
+    background-image: radial-gradient( rgba(255, 255, 255, 0.1) 9%, transparent 9%);
+    background-size: 12vmin 12vmin;
+    height: 94.1vh;
+    position: absolute;
+    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+    width: 100vw;
+    z-index: 1;
+}
+
+.menu-item {
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 4vw;
+    padding: 0.5vw 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
 }
 
 .heading {
@@ -46,7 +124,7 @@ section {
         text-align: center;
     }
     img {
-            width: 100%;
-            margin-bottom: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }
