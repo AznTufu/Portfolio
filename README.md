@@ -10,7 +10,7 @@ git clone git@github.com:AznTufu/Portfolio.git
 
 <h2>Terminal</h2>
 
-Install <span style="color: red;">sass</span> with Nodejs
+Install sass with Nodejs
 ```
 npm install -g sass
 ```
@@ -22,7 +22,7 @@ With Homebrew (on Mac or Linux)
 ```
 brew install sass/sass/sass
 ```
-Using <span style="color: red;">sass</span> at the repository root
+Using sass at the repository root
 ```
 sass --watch style.scss:build.css
 ```
