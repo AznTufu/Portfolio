@@ -1,130 +1,141 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
-  outline: none;
-  border: none;
-  text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
 }
 
 html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-  scroll-padding-top: 6.5rem;
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6.5rem;
 }
 
 section {
-  padding: 3rem 2rem;
-  max-width: 1600px;
-  margin: 0 auto;
+    padding: 3rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #fff;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
+
 .header .flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-  padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 1.5rem 2rem;
 }
+
 .header .flex .logo {
-  font-size: 2rem;
+    font-size: 2rem;
 }
 
 #menu-btn {
-  font-size: 2.5rem;
-  color: #333;
-  cursor: pointer;
-  display: inline-block;
-  transition: 0.2s linear;
+    font-size: 2.5rem;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.2s linear;
 }
+
 #menu-btn.fa-times {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 #menu {
-  position: absolute;
-  background-color: rgb(28, 27, 28);
-  align-items: center;
-  display: flex;
-  height: 94.1vh;
-  width: 100vw;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease;
+    position: absolute;
+    background-color: rgb(28, 27, 28);
+    align-items: center;
+    display: flex;
+    height: 94.1vh;
+    width: 100vw;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
 }
+
 #menu #menu-background-pattern {
-  background-position: 0% calc(-50% * (var(--active-index, 0) + 1));
+    background-position: 0% calc(-50% * (var(--active-index, 0) + 1));
 }
+
 #menu.menu-active {
-  opacity: 2;
-  visibility: inherit;
+    opacity: 2;
+    visibility: inherit;
 }
 
 #menu-items {
-  margin-left: 20vw;
-  position: relative;
-  z-index: 2;
+    margin-left: 20vw;
+    position: relative;
+    z-index: 2;
 }
-#menu-items:hover ~ #menu-background-pattern {
-  background-size: 11vmin 11vmin;
-  opacity: 0.5;
+
+#menu-items:hover~#menu-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.5;
 }
-#menu-items:hover > .menu-item {
-  opacity: 0.3;
+
+#menu-items:hover>.menu-item {
+    opacity: 0.3;
 }
-#menu-items:hover > .menu-item:hover {
-  opacity: 1;
+
+#menu-items:hover>.menu-item:hover {
+    opacity: 1;
 }
 
 #menu-background-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%);
-  background-size: 12vmin 12vmin;
-  height: 94.1vh;
-  position: absolute;
-  transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
-  width: 100vw;
-  z-index: 1;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%, transparent 9%);
+    background-size: 12vmin 12vmin;
+    height: 94.1vh;
+    position: absolute;
+    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+    width: 100vw;
+    z-index: 1;
 }
 
 .menu-item {
-  color: white;
-  cursor: pointer;
-  display: block;
-  font-size: 4vw;
-  padding: 0.5vw 0rem;
-  text-decoration: none;
-  transition: opacity 400ms ease;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 4vw;
+    padding: 0.5vw 0rem;
+    text-decoration: none;
+    transition: opacity 400ms ease;
 }
 
 .heading {
-  text-align: center;
-  margin-bottom: 3rem;
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
 .projets .box-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 30rem);
-  gap: 2rem;
-  align-items: flex-start;
-  justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 30rem);
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
 }
+
 .projets .box-container .box {
-  text-align: center;
+    text-align: center;
 }
+
 .projets .box-container img {
-  width: 100%;
-  margin-bottom: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
 }
+
 
 /*# sourceMappingURL=build.css.map */
