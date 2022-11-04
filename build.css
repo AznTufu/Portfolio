@@ -11,6 +11,7 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 body {
@@ -27,10 +28,48 @@ span {
   font-weight: 400;
   color: white;
   margin: 0px;
+  cursor: none;
 }
 
+.cursor {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #B6DCFE;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 2000;
+}
+.cursor::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 5px;
+  height: 5px;
+  background: #B6DCFE;
+  border-radius: 50%;
+}
+
+.expand {
+  animation: Anim 0.5s;
+  background: #B6DCFE;
+}
+
+@keyframes Anim {
+  0% {
+    transform: scale(0.1);
+  }
+  50% {
+    transform: scale(0.7);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 20%;
+  }
+}
 nav {
-  position: sticky;
   top: 0;
   width: 100%;
   border-bottom: 1px solid rgba(250, 11, 11, 0.1);
@@ -231,7 +270,7 @@ main article[data-status=becoming-active-from-after] {
   color: white;
   text-align: center;
 }
-.home-bg .home .content h3 {
+.home-bg .home .content h1 {
   text-align: start;
   font-size: 6rem;
   font-family: "Merienda One", cursive;
@@ -260,17 +299,18 @@ main article[data-status=becoming-active-from-after] {
 
 .separator {
   margin-top: 10px;
-  margin-bottom: 48px;
   width: 70%;
   height: 1px;
   left: 15%;
   position: relative;
   background-color: rgb(36, 36, 36);
 }
-.separator .text-top {
-  margin-bottom: 48px;
+
+.text-top {
+  margin-bottom: 60px;
 }
-.separator .text-bop {
+
+.text-bop {
   margin-top: 48px;
 }
 

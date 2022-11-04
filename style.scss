@@ -11,7 +11,7 @@
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    // cursor: none;
+    cursor: none;
 }
 
 body {
@@ -28,47 +28,46 @@ span {
     font-weight: 400;
     color: white;
     margin: 0px;
-    // cursor: none;
+    cursor: none;
 }
 
-// .cursor {
-//     width: 40px;
-//     height: 40px;
-//     border: 1px solid #B6DCFE;
-//     border-radius: 50%;
-//     position: absolute;
-//     pointer-events: none;
-//     z-index: 2000;
-//     &::before {
-//         content: '';
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%) scale(1);
-//         width: 5px;
-//         height: 5px;
-//         background: #B6DCFE;
-//         border-radius: 50%;
-//     }
-// }
-// .expand {
-//     animation: Anim .5s;
-//     background: #B6DCFE;
-// }
-// @keyframes Anim {
-//     0% {
-//         transform: scale(0.1);
-//     }
-//     50% {
-//         transform: scale(0.7);
-//     }
-//     100% {
-//         transform: scale(1);
-//         opacity: 20%;
-//     }
-// }
+.cursor {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #B6DCFE;
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 2000;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        width: 5px;
+        height: 5px;
+        background: #B6DCFE;
+        border-radius: 50%;
+    }
+}
+.expand {
+    animation: Anim .5s;
+    background: #B6DCFE;
+}
+@keyframes Anim {
+    0% {
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 20%;
+    }
+}
 nav {
-    position: sticky;
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(250, 11, 11, 0.1);
@@ -268,7 +267,7 @@ main {
         .content {
             color: white;
             text-align: center;
-            h3 {
+            h1 {
                 text-align: start;
                 font-size: 6rem;
                 font-family: 'Merienda One', cursive;
@@ -300,20 +299,20 @@ main {
 
 .separator {
     margin-top: 10px;
-    margin-bottom: 48px;
     width: 70%;
     height: 1px;
     left: 15%;
     position: relative;
     background-color: rgb(36, 36, 36);
-    .text-top {
-        margin-bottom: 48px;
-    }
-    .text-bop {
-        margin-top: 48px;
-    }
+
 }
 
+.text-top {
+    margin-bottom: 60px;
+}
+.text-bop {
+    margin-top: 48px;
+}
 .skills .box-container {
     display: flex;
     flex-direction: column;
