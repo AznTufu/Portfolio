@@ -232,13 +232,13 @@ main {
             }
         }
         &:first-child>.article-image-section {
-            background-image: url("./img/chicken-delivery.png");
+            background-image: url("./img/chicken-delivery.webp");
         }
         &:nth-child(2)>.article-image-section {
-            background-image: url("./img/halles.png");
+            background-image: url("./img/halles.webp");
         }
         &:nth-child(3)>.article-image-section {
-            background-image: url("./img/treasure-hunt.jpg");
+            background-image: url("./img/treasure-hunt.webp");
         }
     }
     article[data-status="inactive"] {
@@ -265,7 +265,7 @@ main {
 }
 
 .home-bg {
-    background: url(./img/bg-image.jpg) no-repeat;
+    background: url(./img//bg-image.webp) no-repeat;
     background-position: center;
     background-size: cover;
     .home {
