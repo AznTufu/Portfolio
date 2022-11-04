@@ -234,13 +234,13 @@ main article .article-nav-section .article-nav-button:nth-child(2) {
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 main article:first-child > .article-image-section {
-  background-image: url("./img/chicken-delivery.png");
+  background-image: url("/img/chicken-delivery.webp");
 }
 main article:nth-child(2) > .article-image-section {
-  background-image: url("./img/halles.png");
+  background-image: url("/img/halles.webp");
 }
 main article:nth-child(3) > .article-image-section {
-  background-image: url("./img/treasure-hunt.jpg");
+  background-image: url("/img/treasure-hunt.webp");
 }
 main article[data-status=inactive] {
   transform: translateX(-100%);
@@ -265,7 +265,7 @@ main article[data-status=becoming-active-from-after] {
 }
 
 .home-bg {
-  background: url(./img/bg-image.jpg) no-repeat;
+  background: url(./img//bg-image.webp) no-repeat;
   background-position: center;
   background-size: cover;
 }

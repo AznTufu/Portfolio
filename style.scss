@@ -232,13 +232,13 @@ main {
             }
         }
         &:first-child>.article-image-section {
-            background-image: url("./img/chicken-delivery.webp");
+            background-image: url("/img/chicken-delivery.webp");
         }
         &:nth-child(2)>.article-image-section {
-            background-image: url("./img/halles.webp");
+            background-image: url("/img/halles.webp");
         }
         &:nth-child(3)>.article-image-section {
-            background-image: url("./img/treasure-hunt.webp");
+            background-image: url("/img/treasure-hunt.webp");
         }
     }
     article[data-status="inactive"] {
