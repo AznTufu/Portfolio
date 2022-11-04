@@ -23,7 +23,8 @@ h2,
 h3,
 a,
 p,
-span {
+span,
+button {
     font-family: "Rubik", sans-serif;
     font-weight: 400;
     color: white;
@@ -193,6 +194,14 @@ main {
             padding: 2rem 6rem;
             color: white;
             border-top: 1px solid rgb(255, 255, 255, 0.1);
+            h1{
+                flex-basis: 50%;
+                font-family: "Montserrat", sans-serif;
+                font-size: 3.5rem;
+                line-height: 3rem;
+                margin: 0px;
+                text-transform: uppercase;
+            }
             h2 {
                 flex-basis: 50%;
                 font-family: "Montserrat", sans-serif;
