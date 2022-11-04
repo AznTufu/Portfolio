@@ -9,23 +9,29 @@
 }
 
 html {
-    font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6.5rem;
     cursor: none;
 }
 
-section {
-    padding: 3rem 2rem;
-    max-width: 1600px;
-    margin: 0 auto;
+h1,
+h2,
+h3,
+a,
+p,
+span {
+    font-family: "Rubik", sans-serif;
+    font-weight: 400;
+    color: white;
+    margin: 0px;
+    cursor: none;
 }
 
 .cursor {
-    width: 20px;
-    height: 20px;
-    border: 1px solid rgb(0, 119, 255);
+    width: 40px;
+    height: 40px;
+    border: 1px solid #B6DCFE;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
@@ -35,37 +41,48 @@ section {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        width: 20px;
-        height: 20px;
-        background: rgb(0, 119, 255);
+        transform: translate(-50%, -50%) scale(1);
+        width: 5px;
+        height: 5px;
+        background: #B6DCFE;
         border-radius: 50%;
     }
 }
 
-.header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
-    z-index: 1000;
-    .flex {
+.expand {
+    animation: Animation .5s;
+    background: #B6DCFE;
+}
+
+@keyframes Animation {
+    0% {
+        transform: scale(0.1);
+    }
+    50% {
+        transform: scale(0.7);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 20%;
+    }
+}
+
+nav {
+    width: 100%;
+    border-bottom: 1px solid rgba(250, 11, 11, 0.1);
+    color: white;
+    background-color: rgb(6, 11, 25);
+    .nav-flex {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        position: relative;
-        padding: 1.5rem 2rem;
-        .logo {
-            font-size: 2rem;
-        }
+        gap: 1rem;
+        padding: 2rem 8rem;
     }
 }
 
 #menu-btn {
     font-size: 2.5rem;
-    color: #333;
     display: inline-block;
     transition: .2s linear;
     &.fa-times {
@@ -75,11 +92,11 @@ section {
 
 #menu {
     position: absolute;
-    background-color: rgb(28, 27, 28);
+    background-color: rgb(6, 11, 25);
     align-items: center;
     display: flex;
-    height: 94.1vh;
-    width: 100vw;
+    height: 87.3vh;
+    width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
@@ -88,13 +105,15 @@ section {
         background-position: 0% calc(-50% * (var(--active-index, 0) + 1));
     }
     &.menu-active {
-        opacity: 2;
+        opacity: 1;
         visibility: inherit;
+        overflow: hidden;
     }
 }
 
 #menu-items {
     margin-left: 20vw;
+    bottom: 6vw;
     position: relative;
     z-index: 2;
     &:hover {
@@ -102,7 +121,7 @@ section {
             background-size: 11vmin 11vmin;
             opacity: 0.5;
         }
-        >.menu-item {
+        .menu-item {
             opacity: 0.3;
             &:hover {
                 opacity: 1;
@@ -112,12 +131,12 @@ section {
 }
 
 #menu-background-pattern {
-    background-image: radial-gradient( rgba(255, 255, 255, 0.1) 9%, transparent 9%);
+    background-image: radial-gradient( rgba(255, 255, 255, 0.2) 10%, transparent 10%);
     background-size: 12vmin 12vmin;
-    height: 94.1vh;
+    width: 100vw;
+    height: 87.3vh;
     position: absolute;
     transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
-    width: 100vw;
     z-index: 1;
 }
 
@@ -128,24 +147,268 @@ section {
     padding: 0.5vw 0rem;
     text-decoration: none;
     transition: opacity 400ms ease;
+    a {
+        text-decoration: none;
+    }
+}
+
+main {
+    height: 87.3vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(6, 11, 25);
+    article {
+        height: 100%;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        transition: transform 400ms ease;
+        .article-section {
+            height: 100%;
+            display: flex;
+        }
+        .article-image-section {
+            background-position: center;
+            background-size: cover;
+        }
+        .article-description-section {
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 4rem;
+            border-left: 1px solid rgb(255, 255, 255, 0.1);
+            p {
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 1.25em;
+            }
+        }
+        .article-title-section {
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 6rem;
+            color: white;
+            border-top: 1px solid rgb(255, 255, 255, 0.1);
+            h2 {
+                flex-basis: 50%;
+                font-family: "Montserrat", sans-serif;
+                font-size: 3.5rem;
+                line-height: 3rem;
+                margin: 0px;
+                text-transform: uppercase;
+            }
+            i {
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 2.5rem;
+            }
+        }
+        .article-nav-section {
+            border-top: 1px solid rgb(255, 255, 255, 0.1);
+            border-left: 1px solid rgb(255, 255, 255, 0.1);
+            .article-nav-button {
+                background-color: transparent;
+                flex-grow: 1;
+                color: rgba(255, 255, 255, 0.75);
+                font-size: 3rem;
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.02);
+                }
+                &:nth-child(2) {
+                    border-left: 1px solid rgb(255, 255, 255, 0.1);
+                }
+            }
+        }
+        &:first-child>.article-image-section {
+            background-image: url("./img/chicken-delivery.png");
+        }
+        &:nth-child(2)>.article-image-section {
+            background-image: url("./img/halles.png");
+        }
+        &:nth-child(3)>.article-image-section {
+            background-image: url("./img/treasure-hunt.jpg");
+        }
+    }
+    article[data-status="inactive"] {
+        transform: translateX(-100%);
+        transition: none;
+    }
+    article[data-status="active"] {
+        transform: translateX(0%);
+    }
+    article[data-status="before"] {
+        transform: translateX(-100%);
+    }
+    article[data-status="after"] {
+        transform: translateX(100%);
+    }
+    article[data-status="becoming-active-from-before"] {
+        transform: translateX(-100%);
+        transition: none;
+    }
+    article[data-status="becoming-active-from-after"] {
+        transform: translateX(100%);
+        transition: none;
+    }
+}
+
+.home-bg {
+    background: linear-gradient(90deg, rgb(255, 255, 255), transparent 100%), url(./img/chicken-delivery.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    section {
+        padding: 3rem 2rem;
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .home {
+        height: 100vh;
+        .content {
+            left: 50vh;
+            justify-content: center;
+            text-align: center;
+            h3 {
+                text-align: start;
+                font-size: 6rem;
+                color: rgb(0, 0, 0);
+                font-family: 'Merienda One', cursive;
+            }
+            p {
+                font-size: 3rem;
+                color: rgb(0, 0, 0);
+                line-height: 2;
+                text-align: start;
+            }
+        }
+    }
+}
+
+.section {
+    padding: 3rem 2rem;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .heading {
     text-align: center;
-    margin-bottom: 3rem;
+    margin: 5rem 0;
+    h3 {
+        font-size: 3rem;
+        color: #333;
+        font-family: 'Merienda One', cursive;
+    }
 }
 
-.projets .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
-    gap: 2rem;
+.skills .box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     align-items: flex-start;
     justify-content: center;
-    .box {
-        text-align: center;
+    .skills_top {
+        display: flex;
+        width: 400px;
+        transform: translateY(-50%);
+        .txt {
+            white-space: nowrap;
+            font-size: 50px;
+            animation: skill_top 5s linear infinite;
+        }
     }
-    img {
+    .skills_bot {
+        display: flex;
         width: 100%;
-        margin-bottom: 1rem;
+        transform: translateY(-50%);
+        .txt {
+            white-space: nowrap;
+            font-size: 50px;
+            animation: skill_bot 10s linear infinite;
+        }
+    }
+    @keyframes skill_top {
+        0% {
+            transform: translate(-100%, 0);
+        }
+        100% {
+            transform: translate(10%, 0);
+        }
+    }
+    @keyframes skill_bot {
+        0% {
+            transform: translate(-10%, 0);
+        }
+        100% {
+            transform: translate(-100%, 0);
+        }
+    }
+}
+
+@media(max-width: 1200px) {
+    main {
+        overflow-y: auto;
+        article {
+            grid-template-columns: none;
+            grid-template-rows: 1.5fr repeat(3, 0.75fr) 0.25fr;
+            height: max(900px, 100%);
+            .article-image-section {
+                order: 1;
+            }
+            .article-description-section {
+                justify-content: center;
+                order: 3;
+                border-left: none;
+            }
+            .article-title-section {
+                border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+                order: 2;
+                h2 {
+                    font-size: 3rem;
+                    line-height: 2.6rem;
+                }
+            }
+            .article-nav-section {
+                border-bottom: 1px solid rgb(255, 255, 255, 0.1);
+                order: 4;
+                border-left: none;
+            }
+        }
+    }
+}
+
+@media(max-width: 800px) {
+    nav {
+        .nav-flex {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem 2rem;
+        }
+    }
+    main {
+        article {
+            grid-template-rows: 1fr repeat(4, 0.5fr);
+            height: max(700px, 100%);
+            .article-description-section {
+                padding: 2rem;
+                p {
+                    font-size: 1rem;
+                }
+            }
+            .article-title-section {
+                padding: 2rem;
+                h2 {
+                    flex-basis: 70%;
+                    font-size: 1.75em;
+                    line-height: 1.5rem;
+                }
+                i {
+                    font-size: 2rem;
+                }
+            }
+        }
     }
 }

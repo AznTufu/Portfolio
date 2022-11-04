@@ -12,50 +12,101 @@
 
 <body>
     <div class="cursor"></div>
-    <header class="header">
-        <section class="flex">
-            <div class="logo">logo</div>
+    <nav>
+        <section class="nav-flex">
+            <a href="index.html" class="logo"><img src="img/logo.svg" alt=""></a>
             <div id="menu-btn" class="fas fa-bars"></div>
         </section>
-    </header>
-    <div id="menu">
-        <div id="menu-items">
-            <div class="menu-item">Home</div>
-            <div class="menu-item">About</div>
-            <div class="menu-item">Skill</div>
-            <div class="menu-item">Project</div>
+        <div id="menu">
+            <div id="menu-items">
+                <div class="menu-item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="menu-item">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="menu-item">
+                    <a href="about.html#skill">Skill</a>
+                </div>
+                <div class="menu-item">
+                    <a href="about.html#project">Project</a>
+                </div>
+                <div class="menu-item">
+                    <a href="about.html#contact">Contact</a>
+                </div>
+            </div>
+            <div id="menu-background-pattern"></div>
         </div>
-        <div id="menu-background-pattern"></div>
-    </div>
-    <section>
-        <h1>DEVELOPPEUR <br> WEB</h1>
-        <h1>i'm Tony a second year student at IIM</h1>
-    </section>
-    <section class="projets" id="projet">
-        <div class="heading">
-            <h3>Projets</h3>
-        </div>
-        <div class="box-container">
-            <div class="box">
-                <img src="" alt="img">
+    </nav>
+    <main>
+        <article data-index="0" data-status="active">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>
+                    Projet de fin d'année pour rentrer dans l'axe Coding & Digital Innovation
+                </p>
             </div>
-            <div class="box">
-                <img src="" alt="img">
+            <div class="article-title-section article-section">
+                <h2>Chicken Delivery</h2>
+                <a href="http://tony.tonyzhangiim.tk/">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
-            <div class="box">
-                <img src="" alt="img">
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="LeftClick()">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="article-nav-button" type="button" onclick="RightClick()">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
             </div>
-            <div class="box">
-                <img src="" alt="img">
+        </article>
+
+        <article data-index="1" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>Quartier piétonnier très animé du 1er arrondissement de Paris, le quartier des Halles tient son nom des anciennes halles Baltard</p>
             </div>
-            <div class="box">
-                <img src="" alt="img">
+            <div class="article-title-section article-section">
+                <h2>Le quartier des halles</h2>
+                <a href="https://azntufu.github.io/le_quartier_des_Halles/">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
-            <div class="box">
-                <img src="" alt="img">
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="LeftClick()">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+                <button class="article-nav-button" type="button" onclick="RightClick()">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
             </div>
-        </div>
-    </section>
+        </article>
+
+        <article data-index="2" data-status="inactive">
+            <div class="article-image-section article-section"></div>
+            <div class="article-description-section article-section">
+                <p>Vous êtes des explorateurs venant des quatre coins du monde et vous avez entendu parler d’un archipel regorgeant de trésors. Vous vous empressez de vous y rendre, alléchés par la promesse de richesse et de gloire facile. (Top 5 de l'Epic
+                    Digital Day)
+                </p>
+            </div>
+            <div class="article-title-section article-section">
+                <h2>Treasure Hunt</h2>
+                <a href="http://site.tonyzhangsite.ml/">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+            </div>
+            <div class="article-nav-section article-section">
+                <button class="article-nav-button" type="button" onclick="LeftClick()">
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+                <button class="article-nav-button" type="button" onclick="RightClick()">
+                    <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            </div>
+        </article>
+    </main>
+
 </body>
 <script src="script.js"></script>
 
