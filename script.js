@@ -2,16 +2,16 @@
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-    cursor.setAttribute('style', 'top:' + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px;")
-})
-document.addEventListener('mousedown', e => {
-    cursor.style.transform = 'scale(.5)'
+        cursor.setAttribute('style', 'top:' + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px;")
+    })
+    // document.addEventListener('mousedown', e => {
+    //     cursor.style.transform = 'scale(.5)'
 
-})
-document.addEventListener('mouseup', e => {
-    cursor.style.transform = 'scale(1)'
+// })
+// document.addEventListener('mouseup', e => {
+//     cursor.style.transform = 'scale(1)'
 
-})
+// })
 document.addEventListener('click', () => {
     cursor.classList.add('expand');
 
