@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Poor+Story&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -73,7 +74,7 @@ button {
 nav {
   top: 0;
   width: 100%;
-  border-bottom: 1px solid rgba(250, 11, 11, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   color: white;
   z-index: 10;
   position: sticky;
@@ -143,6 +144,7 @@ nav .nav-flex {
 }
 .menu-item a {
   text-decoration: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 #menu-background-pattern {
@@ -293,15 +295,16 @@ main article[data-status=becoming-active-from-after] {
   font-size: 3rem;
   line-height: 2;
   text-align: start;
+  font-family: "Merienda One", cursive;
 }
 
 .home-section {
-  margin-top: 20vh;
+  margin-top: 25vh;
 }
 
 .heading {
   text-align: center;
-  margin-top: 10rem;
+  margin-bottom: 10px;
 }
 .heading h3 {
   font-size: 2rem;
@@ -310,20 +313,11 @@ main article[data-status=becoming-active-from-after] {
 }
 
 .separator {
-  margin-top: 10px;
-  width: 70%;
+  width: 80%;
   height: 1px;
-  left: 15%;
+  left: 10%;
   position: relative;
-  background-color: rgb(36, 36, 36);
-}
-
-.text-top {
-  margin-bottom: 60px;
-}
-
-.text-bop {
-  margin-top: 48px;
+  background-color: rgb(44, 44, 44);
 }
 
 .skills .box-container {
@@ -333,15 +327,22 @@ main article[data-status=becoming-active-from-after] {
   align-items: flex-start;
   justify-content: center;
 }
+.skills .box-container .text-top {
+  margin-bottom: 80px;
+}
+.skills .box-container .text-bot {
+  bottom: 40px;
+}
 .skills .box-container .skills_top {
   display: flex;
   width: 400px;
   transform: translateY(-50%);
 }
 .skills .box-container .skills_top .txt {
+  font-family: "Caveat", cursive;
   white-space: nowrap;
   font-size: 100px;
-  animation: skill_top 15s linear infinite;
+  animation: skill_top 25s linear infinite;
 }
 .skills .box-container .skills_bot {
   display: flex;
@@ -349,9 +350,10 @@ main article[data-status=becoming-active-from-after] {
   transform: translateY(-50%);
 }
 .skills .box-container .skills_bot .txt {
+  font-family: "Poor Story", cursive;
   white-space: nowrap;
   font-size: 100px;
-  animation: skill_bot 10s linear infinite;
+  animation: skill_bot 20s linear infinite;
 }
 @keyframes skill_top {
   0% {
@@ -368,6 +370,69 @@ main article[data-status=becoming-active-from-after] {
   100% {
     transform: translate(-100%, 0);
   }
+}
+
+.project {
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+.project .box-container {
+  box-sizing: border-box;
+  width: 100%;
+  display: block;
+}
+.project .box-container .title {
+  font-family: "Caveat", cursive;
+  padding: 0px 10vw;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+}
+.project .box-container a {
+  text-decoration: none;
+}
+
+.contact {
+  margin-top: 20vh;
+  padding-bottom: 15vh;
+}
+.contact .box-container {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact .box-container .text {
+  font-family: "caveat", cursive;
+  text-transform: uppercase;
+  font-size: 60px;
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+}
+.contact .footer {
+  font-size: 10px;
+  margin-top: 20px;
+  padding: 0 25vh;
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.contact .footer .socials {
+  display: flex;
+  flex-wrap: row wrap;
+}
+.contact .footer .socials li {
+  text-transform: uppercase;
+  margin: 0px 20px;
+  font-size: 10px;
+  list-style: none;
 }
 
 @media (max-width: 1200px) {
@@ -391,6 +456,10 @@ main article[data-status=becoming-active-from-after] {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     order: 2;
   }
+  main article .article-title-section h1 {
+    font-size: 3rem;
+    line-height: 2.6rem;
+  }
   main article .article-title-section h2 {
     font-size: 3rem;
     line-height: 2.6rem;
@@ -399,6 +468,31 @@ main article[data-status=becoming-active-from-after] {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     order: 4;
     border-left: none;
+  }
+  .home-bg .home .content h1 {
+    font-size: 4rem;
+  }
+  .home-bg .home .content p {
+    left: 20vh;
+    font-size: 1.5rem;
+  }
+  .skills .box-container .text-top {
+    margin-bottom: 40px;
+  }
+  .skills .box-container .skills_top .txt {
+    font-size: 50px;
+  }
+  .skills .box-container .skills_bot .txt {
+    font-size: 50px;
+  }
+  .project .box-container .title {
+    font-size: 40px;
+  }
+  .contact .box-container .text {
+    font-size: 40px;
+  }
+  .contact .footer {
+    padding: 0 150px;
   }
 }
 @media (max-width: 800px) {
@@ -421,6 +515,11 @@ main article[data-status=becoming-active-from-after] {
   main article .article-title-section {
     padding: 2rem;
   }
+  main article .article-title-section h1 {
+    flex-basis: 70%;
+    font-size: 1.75em;
+    line-height: 1.5rem;
+  }
   main article .article-title-section h2 {
     flex-basis: 70%;
     font-size: 1.75em;
@@ -428,6 +527,35 @@ main article[data-status=becoming-active-from-after] {
   }
   main article .article-title-section i {
     font-size: 2rem;
+  }
+  .home-bg .home .content h1 {
+    font-size: 2rem;
+  }
+  .home-bg .home .content p {
+    left: 10vh;
+    font-size: 1rem;
+  }
+  .skills .box-container .text-top {
+    margin-bottom: 5px;
+  }
+  .skills .box-container .skills_top .txt {
+    font-size: 30px;
+  }
+  .skills .box-container .skills_bot .txt {
+    font-size: 30px;
+  }
+  .project .box-container .title {
+    padding: 0px 10vw;
+    font-size: 20px;
+  }
+  .contact .box-container .text {
+    font-size: 20px;
+  }
+  .contact .footer {
+    padding: 0 50px;
+  }
+  .contact .footer .right {
+    display: none;
   }
 }
 

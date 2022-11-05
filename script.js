@@ -1,6 +1,7 @@
 // --- Cursor ---
 const cursor = document.querySelector('.cursor');
 
+//  Centre le cursor selon les valeurs pageY et pageX par rapport à la taille du curseur
 document.addEventListener('mousemove', e => {
     cursor.setAttribute('style', 'top:' + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px;")
 })
@@ -16,6 +17,7 @@ document.addEventListener('click', () => {
 // --- Menu hover ---
 const test = document.getElementById("menu");
 
+//  Pour chaque élement que la souris hover l'élement la position du background change
 Array.from(document.getElementsByClassName("menu-item"))
     .forEach((item, index) => {
         item.onmouseover = () => {
@@ -37,6 +39,8 @@ let activeIndex = 0;
 
 const slides = document.getElementsByTagName("article");
 
+// Opération ternaire, si activeIndex - 1 >= 0 alors c'est vrai activeIndex - 1 sinon slides.length - 1
+// puis on attribut le status after ou before
 const LeftClick = () => {
     const nextIndex = activeIndex - 1 >= 0 ? activeIndex - 1 : slides.length - 1;
 
@@ -52,6 +56,8 @@ const LeftClick = () => {
         activeIndex = nextIndex;
     });
 }
+
+// Opération ternaire, si activeIndex + 1 <= slides.length - 1 alors c'est vrai activeIndex + 1 sinon 0
 
 const RightClick = () => {
     const nextIndex = activeIndex + 1 <= slides.length - 1 ? activeIndex + 1 : 0;
