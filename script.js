@@ -1,9 +1,9 @@
-// --- CURSOR ---
+// --- Cursor ---
 const cursor = document.querySelector('.cursor');
 
 document.addEventListener('mousemove', e => {
-        cursor.setAttribute('style', 'top:' + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px;")
-    })
+    cursor.setAttribute('style', 'top:' + (e.pageY - 20) + "px; left:" + (e.pageX - 20) + "px;")
+})
 
 document.addEventListener('click', () => {
     cursor.classList.add('expand');
@@ -23,7 +23,7 @@ Array.from(document.getElementsByClassName("menu-item"))
         }
     });
 
-// --- Burger MENU SCRIPT ---
+// --- Burger menu ---
 let menu = document.querySelector('#menu-btn');
 
 menu.onclick = () => {
@@ -31,7 +31,7 @@ menu.onclick = () => {
     test.classList.toggle('menu-active');
 }
 
-// --- PROJECT CAROUSEL NAVIGATION ---
+// --- Projects carousel navigation ---
 
 let activeIndex = 0;
 

@@ -75,6 +75,8 @@ nav {
   width: 100%;
   border-bottom: 1px solid rgba(250, 11, 11, 0.1);
   color: white;
+  z-index: 10;
+  position: sticky;
 }
 nav .nav-flex {
   display: flex;
@@ -82,6 +84,7 @@ nav .nav-flex {
   justify-content: space-between;
   gap: 1rem;
   padding: 2rem 8rem;
+  background-color: rgb(6, 11, 25);
 }
 
 #menu-btn {
@@ -98,12 +101,11 @@ nav .nav-flex {
   background-color: rgb(6, 11, 25);
   align-items: center;
   display: flex;
-  height: 87.3vh;
+  height: 87.4vh;
   width: 100%;
   opacity: 0;
   visibility: hidden;
   transition: all 0.5s ease;
-  z-index: 1;
 }
 #menu #menu-background-pattern {
   background-position: 0% calc(-50% * (var(--active-index, 0) + 1));
@@ -116,7 +118,7 @@ nav .nav-flex {
 
 #menu-items {
   margin-left: 20vw;
-  bottom: 6vw;
+  bottom: 1vw;
   position: relative;
   z-index: 2;
 }
@@ -131,16 +133,6 @@ nav .nav-flex {
   opacity: 1;
 }
 
-#menu-background-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 10%, transparent 10%);
-  background-size: 12vmin 12vmin;
-  width: 100%;
-  height: 87.3vh;
-  position: absolute;
-  transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
-  z-index: 1;
-}
-
 .menu-item {
   color: white;
   display: block;
@@ -153,6 +145,16 @@ nav .nav-flex {
   text-decoration: none;
 }
 
+#menu-background-pattern {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.2) 10%, transparent 10%);
+  background-size: 12vmin 12vmin;
+  width: 100%;
+  height: 87.3vh;
+  position: absolute;
+  transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+  z-index: 1;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -160,6 +162,7 @@ main {
   flex-grow: 1;
   position: relative;
   overflow: hidden;
+  z-index: 0;
 }
 main article {
   height: 100%;
@@ -270,7 +273,7 @@ main article[data-status=becoming-active-from-after] {
   background-size: cover;
 }
 .home-bg .home {
-  height: 87vh;
+  height: 87.3vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -301,7 +304,7 @@ main article[data-status=becoming-active-from-after] {
   margin-top: 10rem;
 }
 .heading h3 {
-  font-size: 3rem;
+  font-size: 2rem;
   color: rgba(255, 255, 255, 0.608);
   font-family: "Merienda One", cursive;
 }
@@ -337,7 +340,7 @@ main article[data-status=becoming-active-from-after] {
 }
 .skills .box-container .skills_top .txt {
   white-space: nowrap;
-  font-size: 50px;
+  font-size: 100px;
   animation: skill_top 15s linear infinite;
 }
 .skills .box-container .skills_bot {
@@ -347,7 +350,7 @@ main article[data-status=becoming-active-from-after] {
 }
 .skills .box-container .skills_bot .txt {
   white-space: nowrap;
-  font-size: 50px;
+  font-size: 100px;
   animation: skill_bot 10s linear infinite;
 }
 @keyframes skill_top {

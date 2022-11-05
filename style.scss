@@ -52,10 +52,12 @@ button {
         border-radius: 50%;
     }
 }
+
 .expand {
     animation: Anim .5s;
     background: #B6DCFE;
 }
+
 @keyframes Anim {
     0% {
         transform: scale(0.1);
@@ -68,17 +70,21 @@ button {
         opacity: 20%;
     }
 }
+
 nav {
     top: 0;
     width: 100%;
     border-bottom: 1px solid rgba(250, 11, 11, 0.1);
     color: white;
+    z-index: 10;
+    position: sticky;
     .nav-flex {
         display: flex;
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
         padding: 2rem 8rem;
+        background-color: rgb(6, 11, 25);
     }
 }
 
@@ -96,12 +102,11 @@ nav {
     background-color: rgb(6, 11, 25);
     align-items: center;
     display: flex;
-    height: 87.3vh;
+    height: 87.4vh;
     width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: all 0.5s ease;
-    z-index: 1;
     #menu-background-pattern {
         background-position: 0% calc(-50% * (var(--active-index, 0) + 1));
     }
@@ -114,7 +119,7 @@ nav {
 
 #menu-items {
     margin-left: 20vw;
-    bottom: 6vw;
+    bottom: 1vw;
     position: relative;
     z-index: 2;
     &:hover {
@@ -131,16 +136,6 @@ nav {
     }
 }
 
-#menu-background-pattern {
-    background-image: radial-gradient( rgba(255, 255, 255, 0.2) 10%, transparent 10%);
-    background-size: 12vmin 12vmin;
-    width: 100%;
-    height: 87.3vh;
-    position: absolute;
-    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
-    z-index: 1;
-}
-
 .menu-item {
     color: white;
     display: block;
@@ -153,6 +148,16 @@ nav {
     }
 }
 
+#menu-background-pattern {
+    background-image: radial-gradient( rgba(255, 255, 255, 0.2) 10%, transparent 10%);
+    background-size: 12vmin 12vmin;
+    width: 100%;
+    height: 87.3vh;
+    position: absolute;
+    transition: opacity 800ms ease, background-size 800ms ease, background-position 800ms ease;
+    z-index: 1;
+}
+
 main {
     display: flex;
     flex-direction: column;
@@ -160,6 +165,7 @@ main {
     flex-grow: 1;
     position: relative;
     overflow: hidden;
+    z-index: 0;
     article {
         height: 100%;
         width: 100%;
@@ -194,7 +200,7 @@ main {
             padding: 2rem 6rem;
             color: white;
             border-top: 1px solid rgb(255, 255, 255, 0.1);
-            h1{
+            h1 {
                 flex-basis: 50%;
                 font-family: "Montserrat", sans-serif;
                 font-size: 3.5rem;
@@ -269,7 +275,7 @@ main {
     background-position: center;
     background-size: cover;
     .home {
-        height: 87vh;
+        height: 87.3vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -300,7 +306,7 @@ main {
     text-align: center;
     margin-top: 10rem;
     h3 {
-        font-size: 3rem;
+        font-size: 2rem;
         color: rgba(255, 255, 255, 0.608);
         font-family: 'Merienda One', cursive;
     }
@@ -313,15 +319,16 @@ main {
     left: 15%;
     position: relative;
     background-color: rgb(36, 36, 36);
-
 }
 
 .text-top {
     margin-bottom: 60px;
 }
+
 .text-bop {
     margin-top: 48px;
 }
+
 .skills .box-container {
     display: flex;
     flex-direction: column;
@@ -334,7 +341,7 @@ main {
         transform: translateY(-50%);
         .txt {
             white-space: nowrap;
-            font-size: 50px;
+            font-size: 100px;
             animation: skill_top 15s linear infinite;
         }
     }
@@ -344,7 +351,7 @@ main {
         transform: translateY(-50%);
         .txt {
             white-space: nowrap;
-            font-size: 50px;
+            font-size: 100px;
             animation: skill_bot 10s linear infinite;
         }
     }
