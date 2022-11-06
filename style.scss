@@ -426,6 +426,25 @@ main {
             font-size: 60px;
             line-height: 2;
             letter-spacing: 0.03em;
+            display: inline;
+            &:hover+.hover-image,
+            &:hover+.hover-image2,
+            &:hover+.hover-image3 {
+                display: block;
+            }
+        }
+        .hover-image,
+        .hover-image2,
+        .hover-image3 {
+            display: none;
+            position: absolute;
+            z-index: 2010;
+            pointer-events: none;
+            img {
+                height: 344px;
+                width: 654px;
+                border-radius: 15px;
+            }
         }
         a {
             text-decoration: none;
@@ -527,8 +546,16 @@ main {
             font-size: 50px;
         }
     }
-    .project .box-container .title {
-        font-size: 40px;
+    .project .box-container {
+        .title {
+            font-size: 40px;
+        }
+        .hover-image img,
+        .hover-image2 img,
+        .hover-image3 img {
+            height: 206px;
+            width: 391px;
+        }
     }
     .contact {
         .box-container .text {
@@ -597,9 +624,16 @@ main {
             font-size: 30px;
         }
     }
-    .project .box-container .title {
-        padding: 0px 10vw;
-        font-size: 20px;
+    .project .box-container {
+        .title {
+            padding: 0px 10vw;
+            font-size: 20px;
+        }
+        .hover-image img,
+        .hover-image2 img,
+        .hover-image3 img {
+            display: none;
+        }
     }
     .contact {
         .box-container .text {

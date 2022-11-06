@@ -412,6 +412,25 @@ main article[data-status=becoming-active-from-after] {
   font-size: 60px;
   line-height: 2;
   letter-spacing: 0.03em;
+  display: inline;
+}
+.project .box-container .title:hover + .hover-image, .project .box-container .title:hover + .hover-image2, .project .box-container .title:hover + .hover-image3 {
+  display: block;
+}
+.project .box-container .hover-image,
+.project .box-container .hover-image2,
+.project .box-container .hover-image3 {
+  display: none;
+  position: absolute;
+  z-index: 2010;
+  pointer-events: none;
+}
+.project .box-container .hover-image img,
+.project .box-container .hover-image2 img,
+.project .box-container .hover-image3 img {
+  height: 344px;
+  width: 654px;
+  border-radius: 15px;
 }
 .project .box-container a {
   text-decoration: none;
@@ -510,6 +529,12 @@ main article[data-status=becoming-active-from-after] {
   .project .box-container .title {
     font-size: 40px;
   }
+  .project .box-container .hover-image img,
+.project .box-container .hover-image2 img,
+.project .box-container .hover-image3 img {
+    height: 206px;
+    width: 391px;
+  }
   .contact .box-container .text {
     font-size: 40px;
   }
@@ -569,6 +594,11 @@ main article[data-status=becoming-active-from-after] {
   .project .box-container .title {
     padding: 0px 10vw;
     font-size: 20px;
+  }
+  .project .box-container .hover-image img,
+.project .box-container .hover-image2 img,
+.project .box-container .hover-image3 img {
+    display: none;
   }
   .contact .box-container .text {
     font-size: 20px;
