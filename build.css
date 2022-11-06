@@ -288,6 +288,7 @@ main article[data-status=becoming-active-from-after] {
   text-align: start;
   font-size: 6rem;
   font-family: "Merienda One", cursive;
+  animation: animation 0.8s ease;
 }
 .home-bg .home .content p {
   position: relative;
@@ -296,8 +297,29 @@ main article[data-status=becoming-active-from-after] {
   line-height: 2;
   text-align: start;
   font-family: "Merienda One", cursive;
+  animation: animation2 2s ease;
 }
 
+@keyframes animation {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes animation2 {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
 .home-section {
   margin-top: 25vh;
 }
@@ -397,7 +419,7 @@ main article[data-status=becoming-active-from-after] {
 
 .contact {
   margin-top: 20vh;
-  padding-bottom: 15vh;
+  padding-bottom: 10vh;
 }
 .contact .box-container {
   width: 100%;
