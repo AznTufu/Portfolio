@@ -328,8 +328,8 @@ main article[data-status=becoming-active-from-after] {
   text-align: center;
   margin-bottom: 10px;
 }
-.heading h3 {
-  font-size: 2rem;
+.heading h2 {
+  font-size: 1.5rem;
   color: rgba(255, 255, 255, 0.608);
   font-family: "Merienda One", cursive;
 }
