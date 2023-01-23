@@ -247,12 +247,15 @@ main {
         }
         // les childs prennent une image
         &:first-child>.article-image-section {
-            background-image: url("/img/chicken-delivery.webp");
+            background-image: url("/img/wikifilms.webp");
         }
         &:nth-child(2)>.article-image-section {
-            background-image: url("/img/halles.webp");
+            background-image: url("/img/chicken-delivery.webp");
         }
         &:nth-child(3)>.article-image-section {
+            background-image: url("/img/halles.webp");
+        }
+        &:nth-child(4)>.article-image-section {
             background-image: url("/img/treasure-hunt.webp");
         }
     }
