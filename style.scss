@@ -190,7 +190,8 @@ main {
         }
         .article-image-section {
             background-position: center;
-            background-size: cover;
+            background-size: contain;
+            background-repeat: no-repeat;
         }
         .article-description-section {
             flex-direction: column;
@@ -256,13 +257,13 @@ main {
             background-image: url("/img/halles.webp");
         }
         &:nth-child(4)>.article-image-section {
-            background-image: url("/img/poke-bicrave.webp");
+            background-image: url("/img/vuejs-phone.webp");
         }
         &:nth-child(5)>.article-image-section {
-            background-image: url("/img/treasure-hunt.webp");
+            background-image: url("/img/poke-bicrave.webp");
         }
         &:nth-child(6)>.article-image-section {
-            background-image: url("/img/vuejs-phone.webp");
+            background-image: url("/img/treasure-hunt.webp");
         }
     }
     // attribution des différents transform pour les status qu'on applique aux slider

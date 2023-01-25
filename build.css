@@ -183,7 +183,8 @@ main article .article-section {
 }
 main article .article-image-section {
   background-position: center;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 main article .article-description-section {
   flex-direction: column;
@@ -248,13 +249,13 @@ main article:nth-child(3) > .article-image-section {
   background-image: url("/img/halles.webp");
 }
 main article:nth-child(4) > .article-image-section {
-  background-image: url("/img/poke-bicrave.webp");
+  background-image: url("/img/vuejs-phone.webp");
 }
 main article:nth-child(5) > .article-image-section {
-  background-image: url("/img/treasure-hunt.webp");
+  background-image: url("/img/poke-bicrave.webp");
 }
 main article:nth-child(6) > .article-image-section {
-  background-image: url("/img/vuejs-phone.webp");
+  background-image: url("/img/treasure-hunt.webp");
 }
 main article[data-status=inactive] {
   transform: translateX(-100%);
