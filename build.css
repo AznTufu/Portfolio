@@ -246,15 +246,18 @@ main article:nth-child(2) > .article-image-section {
   background-image: url("/img/chicken-delivery.webp");
 }
 main article:nth-child(3) > .article-image-section {
-  background-image: url("/img/halles.webp");
+  background-image: url("/img/vite-tailwind.webp");
 }
 main article:nth-child(4) > .article-image-section {
-  background-image: url("/img/vuejs-phone.webp");
+  background-image: url("/img/halles.webp");
 }
 main article:nth-child(5) > .article-image-section {
-  background-image: url("/img/poke-bicrave.webp");
+  background-image: url("/img/vuejs-phone.webp");
 }
 main article:nth-child(6) > .article-image-section {
+  background-image: url("/img/poke-bicrave.webp");
+}
+main article:nth-child(7) > .article-image-section {
   background-image: url("/img/treasure-hunt.webp");
 }
 main article[data-status=inactive] {
