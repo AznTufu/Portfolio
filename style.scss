@@ -271,6 +271,9 @@ main {
         &:nth-child(8)>.article-image-section {
             background-image: url("/img/bredConnect.webp");
         }
+        &:nth-child(9)>.article-image-section {
+            background-image: url("/img/react.webp");
+        }
     }
     // attribution des différents transform pour les status qu'on applique aux slider
     article[data-status="inactive"] {
